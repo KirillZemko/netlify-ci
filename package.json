@@ -14,7 +14,7 @@
     "build": "gulp build",
     "dev": "gulp",
     "fixAndBuild": "npm run fixAll && npm run build",
-    "lintfixAndPush": "npm run fixAll && git add . && git commit -m 'подготовили к публикации' && git push" 
+    "lintfixAndPush": "npm run fixAll && git add . && git commit -m 'подготовили к публикации' && git push"
   },
   "author": "",
   "license": "ISC",
@@ -24,7 +24,12 @@
     "gulp": "^5.0.1",
     "gulp-concat-css": "^3.1.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^10.0.0",
+    "postcss": "^8.5.8",
     "prettier": "^3.8.1",
     "stylelint": "^17.6.0"
-  }
+  },
+  "browserList": [
+    "last 5 version"
+  ]
 }

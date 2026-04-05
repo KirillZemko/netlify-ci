@@ -3,6 +3,7 @@ const concat = require('gulp-concat-css'); // подключаем gulp-contact 
 const plumber = require('gulp-plumber'); // подключаем gulp-blumper, позволяет запускать сборку, даже если есть ошибки
 const del = require('del'); // подключаем del v.6.0.0, чтобы при удалении чего-то из исходников, файлы удалялись и из сборки
 const browserSync = require('browser-sync').create(); // просмотр результатов в реальном времени (подключение особенным способом, см документацию)
+const postcss = require('gulp-postcss');
 
 function html() {
   return gulp.src('src/**/*.html')
@@ -12,10 +13,13 @@ function html() {
 }
 
 function css() {
+  const plugins = [];
+
   return gulp.src('src/blocks/**/*.css')
           .pipe(plumber())
           .pipe(concat('bundle.css'))
-          .pipe(gulp.dest('dist'))
+          .pipe(postcss(plugins))
+                .pipe(gulp.dest('dist'))
           .pipe(browserSync.reload({stream: true}));
 }
 
