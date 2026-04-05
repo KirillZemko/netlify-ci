@@ -19,17 +19,21 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.27",
     "browser-sync": "^3.0.4",
+    "cssnano": "^7.1.4",
     "del": "^6.0.0",
     "gulp": "^5.0.1",
     "gulp-concat-css": "^3.1.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^10.0.0",
     "postcss": "^8.5.8",
+    "postcss-combine-media-query": "^2.1.0",
     "prettier": "^3.8.1",
     "stylelint": "^17.6.0"
   },
-  "browserList": [
-    "last 5 version"
+  "browserslist": [
+    "last 5 versions",
+    "ie 10"
   ]
 }

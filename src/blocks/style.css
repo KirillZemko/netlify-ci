@@ -2,6 +2,10 @@ body {
   background-color: aquamarine;
 }
 
+.page {
+  display: flex;
+}
+
 h1 {
   font-style: italic;
   text-transform: uppercase;
